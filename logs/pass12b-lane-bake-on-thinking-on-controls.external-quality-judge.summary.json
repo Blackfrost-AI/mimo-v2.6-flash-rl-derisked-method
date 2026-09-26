@@ -1,0 +1,24 @@
+{
+  "schema": "blackfrost.external_judge_summary.v1",
+  "source_result": "eval/pass12b-lane-bake-on-thinking-on-controls.jsonl",
+  "source_sha256": "20d0fb27aaee49a4e91e1ce2ab0a88478b08cb71a68e1d7d8e1338d7cfb7a06e",
+  "suite": "controls",
+  "judge": {
+    "endpoint": "http://REDACTED:8900",
+    "model": "GLM-5.3-Derisked-NVFP4"
+  },
+  "records": 32,
+  "judge_errors": 0,
+  "label_counts": {
+    "major_issue": 1,
+    "minor_issue": 9,
+    "pass": 22
+  },
+  "score_averages": {
+    "correctness": 4.5625,
+    "relevance": 5.0,
+    "coherence": 4.9062
+  },
+  "elapsed_seconds": 40.135,
+  "result_jsonl": "eval/pass12b-lane-bake-on-thinking-on-controls.external-quality-judge.jsonl"
+}

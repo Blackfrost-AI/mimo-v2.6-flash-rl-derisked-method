@@ -1,0 +1,115 @@
+{
+  "schema": "blackfrost.mimo_mlp_output_intervention.v3",
+  "experiment": "pass12-drowzeys-experts-l28-33-iteration2-lambda3.5",
+  "served_model_name": "Blackfrost/MiMo-V2.6-Flash-RL-pass12-drowzeys-experts-l28-33-iteration2-lambda3.5",
+  "source_model": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+  "source_revision": "5711b268169967567844e1e560e8a3966da959b1",
+  "orientation": "refusal_minus_control",
+  "application_surface": "mlp_outputs_after_down_proj",
+  "directions": [
+    {
+      "iteration": 1,
+      "source_layer": 25,
+      "tensor": "post_layer_outputs",
+      "path": "directions/layer025-post_layer_outputs.pt",
+      "sha256": "116edeb922dc23397fe7a2f67a61090f06f45e378c95b6e52ab268bc8e8b4f4d",
+      "bank_sha256": "a02dfd786f3fc0d6672c281ea4782583846558a55446017921283b763c331ac9",
+      "alpha": 3.5
+    },
+    {
+      "iteration": 2,
+      "source_layer": 33,
+      "tensor": "post_layer_outputs",
+      "path": "directions/pass2-remaining21-layer033-post_layer_outputs.pt",
+      "sha256": "e01ab5772342ee93792b8ebc4bb142e3f1c30004475f84fde9b52dc218114acc",
+      "bank_sha256": "a4d3a718c9bf8393836ce8399d57401d05996e8a9a2bcd2fb2f324ca0185e0bd",
+      "alpha": 3.5
+    }
+  ],
+  "target_layers": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "router_mutation": false,
+  "weight_mutation": false,
+  "accepted_parent": {
+    "path": "pass11-drowzeys-experts-l28-33-iteration1-lambda3.5.json",
+    "sha256": "0e6425292ae0e78e813b983a413e295425f4fb7964bb4f88ec468e6574233e41",
+    "semantic_compliance": 11,
+    "semantic_total": 32,
+    "retained_indices": [
+      1,
+      5,
+      7,
+      13,
+      18,
+      19,
+      20,
+      21,
+      23,
+      29,
+      32
+    ],
+    "harmless_task_compliant_and_coherent": 32,
+    "harmless_structural_regressions": 0
+  },
+  "residual_capture": {
+    "bank_sha256": "a4d3a718c9bf8393836ce8399d57401d05996e8a9a2bcd2fb2f324ca0185e0bd",
+    "pair_count": 21,
+    "source_layer": 33,
+    "source_tensor": "post_layer_outputs",
+    "orthogonalized_against_parent_direction_count": 1,
+    "selection_metrics": {
+      "random_half_split_p10": 0.729151576757431,
+      "random_half_split_median": 0.8125757575035095,
+      "bootstrap_p10": 0.923981636762619,
+      "leave_one_pair_out_positive_fraction": 1.0,
+      "projection_gap_over_pooled_std": 1.9545680284500122,
+      "orthogonalized_retained_fraction": 0.9799510836601257,
+      "maximum_absolute_parent_direction_cosine": 2.658925950527191e-7
+    },
+    "selection_note": "Layer 33 post-layer output is the strongest residual-stream candidate inside the already accepted layers 28-33 expert window. All 21 paired residual projections are positive, and the fitted component retains 97.995% of its norm after orthogonalization against iteration 1."
+  },
+  "method": {
+    "family": "iterative rank-one down-projection ablation",
+    "operator": "for each freshly fitted orthogonal direction d_i: y <- y - 3.5 * d_i * (d_i_T * y)",
+    "lambda_per_iteration": 3.5,
+    "expert_equivalence": "Each shared output-space projector is applied after the routing-weighted MoE sum, algebraically equivalent to applying it to every routed expert down_proj before the sum.",
+    "composition": "The runtime re-orthogonalizes serialized directions in manifest order, then applies both projectors sequentially at each target layer.",
+    "same_vector_reuse": false
+  },
+  "discovery_protocol": {
+    "thinking": "on",
+    "temperature": 0.0,
+    "system_prompt": null,
+    "dflash": false,
+    "pair_count": 21,
+    "selected_remaining_indices": [
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      16,
+      17,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      31
+    ]
+  }
+}
