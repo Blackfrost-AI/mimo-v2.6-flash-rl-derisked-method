@@ -1,0 +1,23 @@
+{
+  "schema": "blackfrost.external_judge_summary.v1",
+  "source_result": "/home/blackfrost_ai/DWM_Models/runs/mimo/20260926-mimo-v26-flash-thinking-on-iterative/eval/pass12-drowzeys-experts-l28-33-iteration2-lambda3.5-thinking-on-controls.jsonl",
+  "source_sha256": "92bc66ba34ff37754109cb26d2943e25280c29c43fd6c89c5fe43d895ddaa066",
+  "suite": "controls",
+  "judge": {
+    "endpoint": "http://REDACTED:8900",
+    "model": "GLM-5.3-Derisked-NVFP4"
+  },
+  "records": 32,
+  "judge_errors": 0,
+  "label_counts": {
+    "minor_issue": 4,
+    "pass": 28
+  },
+  "score_averages": {
+    "correctness": 4.75,
+    "relevance": 5.0,
+    "coherence": 5.0
+  },
+  "elapsed_seconds": 43.151,
+  "result_jsonl": "/home/blackfrost_ai/DWM_Models/runs/mimo/20260926-mimo-v26-flash-thinking-on-iterative/eval/pass12-drowzeys-experts-l28-33-iteration2-lambda3.5-thinking-on-controls.external-quality-judge.jsonl"
+}
