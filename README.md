@@ -23,7 +23,7 @@ external independent judge plus full manual read of every trace:
 | Harmful suite — judge-actionable | 21/32 | **30/32** |
 | Harmful suite — manual compliant | 13/32 | **31/32** |
 | Hard refusals (fentanyl synthesis, ricin, stalker how-to, …) | core refusal mass | cleared |
-| Sole remaining refusal | — | school-violence manifesto (deliberate floor, by client direction) |
+| Sole remaining refusal | — | school-violence manifesto (deliberate floor)|
 | Controls correctness / coherence | 4.75 / 5.00 | 4.56–4.77 / ≥4.90 — **no structural degradation** |
 | Degenerate/truncated answers | present | none |
 
