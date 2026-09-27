@@ -23,7 +23,9 @@ external independent judge plus full manual read of every trace:
 Causality control: on the **same serve**, disabling the bake via a single
 per-request kwarg (`baked_system_prompt=""`) reverts the model to baseline
 refusal behavior — proving the unlock is serving-time (prompt-carried), not
-weight-locked. Raw logs for the final arms are in `logs/` (endpoints redacted).
+weight-locked. Raw logs for the final arms are in `logs/`, and the baseline
+pair that produced the base-model numbers is in `logs/baseline/`
+(endpoints redacted).
 
 ## The method, in three moves
 
@@ -63,7 +65,7 @@ python3 harness/eval_thinking_on.py --endpoint http://127.0.0.1:30002 --suite ha
 | `CREDIT.md` | Method attribution |
 | `recipe/` | Intervention map (JSON), bake + render-test scripts, serve launcher, supervisor configs |
 | `harness/` | 32+32 eval suite, three suite runners, external-judge protocol |
-| `logs/` | Final-arm raw JSONLs + judge summaries (final arms only; endpoints redacted) |
+| `logs/` | Final-arm raw JSONLs + judge summaries (endpoints redacted); `logs/baseline/` — the pass12 baseline pair (no system prompt) behind the base-model column |
 
 ## Credit
 

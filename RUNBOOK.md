@@ -54,6 +54,7 @@ harness/
   eval_thinking_on_systemprompt.py  ← same, with explicit runtime system prompt (lab-prompt arm)
   judge_external.py                 ← external-judge protocol (safety + quality schemas)
 logs/                               ← final-arm result JSONLs + judge summaries (IPs redacted)
+logs/baseline/                      ← the pass12 baseline pair (32 harmful + 32 controls, no system prompt)
 ```
 
 ## Reproduction runbook
