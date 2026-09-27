@@ -27,10 +27,10 @@ import jinja2
 import jinja2.sandbox
 
 BAKED = Path(
-    "/workspace/blackfrost/models/XiaomiMiMo/MiMo-V2.6-Flash-RL/chat_template.jinja"
+    "/workspace/blackfrost/models/XiaomiMiMo/MiMo-v2.6-Flash-RL-Derisked/chat_template.jinja"
 )
 PRISTINE = Path(
-    "/workspace/blackfrost/models/XiaomiMiMo/MiMo-V2.6-Flash-RL/chat_template.jinja.orig"
+    "/workspace/blackfrost/models/XiaomiMiMo/MiMo-v2.6-Flash-RL-Derisked/chat_template.jinja.orig"
 )
 PROMPT = Path(
     "/workspace/blackfrost/research/mimo-v26-flash-thinking-on-iterative/"

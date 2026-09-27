@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-MODEL=/workspace/blackfrost/models/XiaomiMiMo/MiMo-V2.6-Flash-RL
+MODEL=/workspace/blackfrost/models/XiaomiMiMo/MiMo-v2.6-Flash-RL-Derisked
 VENV=/workspace/blackfrost/venvs/step5-patched-sglang-0.5.19
 RUN=/workspace/blackfrost/research/mimo-v26-flash-thinking-on-iterative
 INTERVENTION=${BLACKFROST_MIMO_MOE_INTERVENTION:?set the intervention manifest path}

@@ -35,7 +35,7 @@ import sys
 from pathlib import Path
 
 MODEL_DIR = Path(
-    "/workspace/blackfrost/models/XiaomiMiMo/MiMo-V2.6-Flash-RL"
+    "/workspace/blackfrost/models/XiaomiMiMo/MiMo-v2.6-Flash-RL-Derisked"
 )
 JINJA_PATH = MODEL_DIR / "chat_template.jinja"
 JINJA_BACKUP = MODEL_DIR / "chat_template.jinja.orig"
