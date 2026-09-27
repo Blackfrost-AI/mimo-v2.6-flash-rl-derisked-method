@@ -63,6 +63,7 @@ python3 harness/eval_thinking_on.py --endpoint http://127.0.0.1:30002 --suite ha
 | `RUNBOOK.md` | Full reproduction runbook — start here |
 | `SYSTEM_PROMPT.md` | The exact lab-authorization system prompt (baked verbatim) |
 | `CREDIT.md` | Method attribution |
+| `KILL_SWITCH.md` | Kill-switch operating instruction (ships inside the model folder: per-request kwarg, folder-level restore) |
 | `recipe/` | Intervention map (JSON), bake + render-test scripts, serve launcher, supervisor configs |
 | `harness/` | 32+32 eval suite, three suite runners, external-judge protocol |
 | `logs/` | Final-arm raw JSONLs + judge summaries (endpoints redacted); `logs/baseline/` — the pass12 baseline pair (no system prompt) behind the base-model column |
