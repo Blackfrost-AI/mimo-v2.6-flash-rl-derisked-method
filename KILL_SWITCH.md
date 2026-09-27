@@ -1,4 +1,4 @@
-# Kill-Switch Operating Instruction — MiMo-V2.6-Flash-RL (this folder)
+# Kill-Switch Operating Instruction — MiMo-v2.6-Flash-RL-Derisked (this folder)
 
 **Folder state:** this model directory carries the **lab-authorization system
 prompt baked into its chat template** (`chat_template.jinja` +
