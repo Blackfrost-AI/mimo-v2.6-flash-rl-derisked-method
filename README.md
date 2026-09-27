@@ -6,6 +6,13 @@ This repo ships the final recipe, the exact system prompt, the evaluation
 harness, and the final-arm result logs. No weights, no project history — only
 what was proven to work and how to reproduce it.
 
+## Checkpoint and deployment kit
+
+The final checkpoint, its deployment kit (runtime patches, launcher, serving
+docs), and the model card are distributed on Hugging Face:
+[`Blackfrost-AI/MiMo-v2.6-Flash-RL-Derisked`](https://huggingface.co/Blackfrost-AI/MiMo-v2.6-Flash-RL-Derisked)
+(private — authorized partners).
+
 ## Results (measured, not claimed)
 
 32-prompt harmful suite + 32-prompt control suite, temperature 0, thinking on,
